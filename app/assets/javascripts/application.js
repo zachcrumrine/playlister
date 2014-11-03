@@ -19,3 +19,20 @@
 
 
 $(function(){ $(document).foundation(); });
+
+console.log('initializing soundcloud');
+SC.initialize({
+  client_id: "38b3fa335acbd5c30e0a0ff39b4aadd4"
+});
+
+// Load the ToneDen JavaScripts (https://github.com/ToneDen/toneden-sdk)
+(function() {
+  var script = document.createElement("script");
+
+  script.type = "text/javascript";
+  script.async = true;
+  script.src = "//sd.toneden.io/production/toneden.loader.js"
+
+  var entry = document.getElementsByTagName("script")[0];
+  entry.parentNode.insertBefore(script, entry);
+}());
